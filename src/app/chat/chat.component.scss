@@ -1,0 +1,83 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+
+  .chat {
+    display: flex;
+    width: 800px;
+    height: 800px;
+  }
+
+  .thread {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-right: 20px;
+
+    mat-selection-list {
+      flex: 1;
+      overflow-y: scroll;
+      padding-right: 10px;
+    }
+
+    mat-list-option {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 0;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 200px;
+      overflow: hidden;
+    }
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h3 {
+      font-weight: bold;
+    }
+
+    .list {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      overflow-y: scroll;
+      padding-right: 10px;
+      margin-bottom: 20px;
+
+      .item {
+        background-color: #e67e22;
+        margin: 5px 0;
+        padding: 10px;
+        color: #ffffff;
+        align-self: flex-end;
+
+        &.reply {
+          background-color: #7f8c8d;
+          align-self: flex-start;
+        }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+}
